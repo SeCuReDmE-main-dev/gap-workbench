@@ -9,6 +9,10 @@ Every figure below comes from a public page read on 2026-11-12, inside the timed
 | A Quebec homeowner reading about LogisVert is "still a bit confused about how it works and what kind of rebate I could expect" | https://www.reddit.com/r/QuebecFinance/comments/1nixyd0/heat_pump_installationmural_system/ |
 | Installers "rushing me to sign the contract" before a rumoured LogisVert end date | https://www.reddit.com/r/Quebec/comments/1mndbwg/la_subvention_logisvert_%C3%A7a_fini_tu_vraiment_le_25/ |
 | Advice repeated to Canadians: check subsidies before buying a heat pump | https://www.reddit.com/r/heatpumps/comments/1umo4la/looking_to_swap_my_aging_ac_with_a_heat_pump/ |
+| LogisVert funded 208,000 heat pumps, close to 80,000 in a single year (Hydro-Québec filing to the Régie de l'énergie) | https://www.regie-energie.qc.ca/storage/app/media/Suivis/Suivi%20D-2025-033/hqd-suivi-d-2025-033-programme-ee-gdp.pdf |
+| 170,000 heat pumps installed last year through Hydro-Québec subsidies (Radio-Canada) | https://ici.radio-canada.ca/nouvelle/2255330/hydro-quebec-facture-electricite |
+| Google autocomplete (fr-CA): "logisvert thermopompe admissible / liste / date limite / 2026", "subvention thermopompe fédéral", "subvention thermopompe hydro-québec liste 2026" | https://suggestqueries.google.com/complete/search?client=firefox&hl=fr&gl=ca&q=logisvert%20thermopompe |
+| A buyer working out the LogisVert rebate on a Costco mini-split by hand | https://forums.redflagdeals.com/costco-danby-18-000-btu-quick-connect-mini-split-1399-300-off-1099-2730754/ |
 | Free heat pumps for 20,000 modest-income households (Ottawa, Québec, Hydro-Québec) | https://www.lapresse.ca/affaires/economie/2026-06-29/quebec/des-thermopompes-gratuites-pour-20-000-menages-a-revenus-modestes.php |
 | A LogisVert bonus worth up to 7,840 $ ended in August 2025 | https://www.protegez-vous.ca/nouvelles/habitation/fin-d-une-des-subventions-du-programme-logisvert |
 | LogisVert requirements changed on 26 November 2025 | https://www.novairplus.com/post/changes-to-logisvert-program-heat-pumps-quebec-2025 |
@@ -49,8 +53,9 @@ Funnel per 1,000 checker users (assumptions marked):
 | Price per lead | 50 $ | below Google's 57 $ for an exclusive lead |
 | Revenue | 5,000 $ | 100 × 50 $ |
 | Jobs booked | 44 | 43.9 % booking rate, SearchLight benchmark |
-| Season-1 target | 20,000 users → 100,000 $ | target; acquisition through the Reddit and Facebook threads where the question is asked |
-| At a 5 % send rate | 50,000 $ | sensitivity |
+| Market | close to 80,000 heat pumps a year | Régie de l'énergie filing |
+| Season-1 target | 1 buyer in 8: 10,000 users → 1,000 leads → 50,000 $, 439 booked jobs | target |
+| At a 5 % send rate | 25,000 $ | sensitivity |
 
 ## Operator workbench
 

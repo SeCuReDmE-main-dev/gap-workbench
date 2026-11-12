@@ -19,3 +19,4 @@ Everything in this repository was made inside one 45-minute We The Flywheel *Fin
 | 07:54 | WTF hackathon banner linked from wetheflywheel.com at the top of the README | |
 | 07:55 | Banner redrawn in the WTF palette (#7C3AED, #EDE9FE, #1F1D2B, square corners, Dosis titles) | |
 | 07:57 | Mapped the workbench to the five Flywheel businesses in the README; added docs/llms.txt | |
+| 08:02 | More demand sources: Régie de l'énergie (208,000 funded, close to 80,000 in one year), Radio-Canada (170,000), Google autocomplete, RedFlagDeals; funnel now sized on the 80,000 yearly market | linter 0 issues |
