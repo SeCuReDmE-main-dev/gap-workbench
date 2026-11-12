@@ -20,3 +20,4 @@ Everything in this repository was made inside one 45-minute We The Flywheel *Fin
 | 07:55 | Banner redrawn in the WTF palette (#7C3AED, #EDE9FE, #1F1D2B, square corners, Dosis titles) | |
 | 07:57 | Mapped the workbench to the five Flywheel businesses in the README; added docs/llms.txt | |
 | 08:02 | More demand sources: Régie de l'énergie (208,000 funded, close to 80,000 in one year), Radio-Canada (170,000), Google autocomplete, RedFlagDeals; funnel now sized on the 80,000 yearly market | linter 0 issues |
+| 08:04 | Canadian lead prices (HomeStars C$40-80 per shared lead) and a Quebec channel (GoSoumissions); opening anchored on 80,000 households a year | linter 0 issues |

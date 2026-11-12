@@ -42,7 +42,7 @@ Source: https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financiere
 
 ## Money
 
-Contractors already pay for qualified leads. Google Local Services Ads: 57 $ per lead and a 43.9 % booking rate (SearchLight Digital benchmark, February 2026, 888 contractors): https://pipelineon.com/blog/best-lead-generation-platforms-plumbing-contractors-2026/ . Thumbtack: 15 $ to 75 $ per lead: https://fieldcamp.ai/hvac-software/lead-generation/ .
+Contractors already pay for qualified leads. Google Local Services Ads: 57 $ per lead and a 43.9 % booking rate (SearchLight Digital benchmark, February 2026, 888 contractors): https://pipelineon.com/blog/best-lead-generation-platforms-plumbing-contractors-2026/ . Thumbtack: 15 $ to 75 $ per lead: https://fieldcamp.ai/hvac-software/lead-generation/ . In Canada, contractors on HomeStars pay C$40 to C$80 per shared lead: https://www.leadtruffle.co/blog/angi-leads-cost-pricing-contractors-2026/ . In Quebec, GoSoumissions sells contractors an annual partnership: https://gosoumissions.com/entrepreneurs .
 
 Funnel per 1,000 checker users (assumptions marked):
 
