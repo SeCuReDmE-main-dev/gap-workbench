@@ -40,19 +40,18 @@ Source: https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financiere
 
 Contractors already pay for qualified leads. Google Local Services Ads: 57 $ per lead and a 43.9 % booking rate (SearchLight Digital benchmark, February 2026, 888 contractors): https://pipelineon.com/blog/best-lead-generation-platforms-plumbing-contractors-2026/ . Thumbtack: 15 $ to 75 $ per lead: https://fieldcamp.ai/hvac-software/lead-generation/ .
 
-Funnel, season 1 (one stated assumption, the send rate):
+Funnel per 1,000 checker users (assumptions marked):
 
 | Step | Value | Basis |
 |---|---|---|
-| Checker users | 20,000 | target, same size as the free program |
-| Send a quote request | 10 % → 2,000 | assumption measured in season 1 |
-| Installers per request | 3 | product design |
-| Price per request | 40 $ | below Google's 57 $ |
-| Revenue | 240,000 $ | 2,000 × 3 × 40 $ |
-| At a 5 % send rate | 120,000 $ | sensitivity |
-| Jobs booked by installers | 43.9 % of requests | SearchLight benchmark |
-
+| Send a quote request | 10 % → 100 leads | assumption, measured in season 1 |
+| Lead type | exclusive, one installer, with the reader's consent | product design |
+| Price per lead | 50 $ | below Google's 57 $ for an exclusive lead |
+| Revenue | 5,000 $ | 100 × 50 $ |
+| Jobs booked | 44 | 43.9 % booking rate, SearchLight benchmark |
+| Season-1 target | 20,000 users → 100,000 $ | target; acquisition through the Reddit and Facebook threads where the question is asked |
+| At a 5 % send rate | 50,000 $ | sensitivity |
 
 ## Operator workbench
 
-`workbench/lint.py` checks the entry before submission: word limits, negations, and every number against `data/` and this sheet. `research/log.md` records each step with its time. The 7 tests also run in an E2B microVM (template `code-interpreter-v1`, the fastest of 12 images in a startup benchmark): 7/7 pass in 2.0 s including the clone.
+`workbench/lint.py` checks the entry before submission: word limits, negations, and every number against `data/` and this sheet. It caught one unsourced figure in this entry. `research/log.md` records each step with its time. The 7 tests also run in an E2B microVM (template `code-interpreter-v1`, the fastest of 12 images in a startup benchmark): 7/7 pass in 2.0 s including the clone.
