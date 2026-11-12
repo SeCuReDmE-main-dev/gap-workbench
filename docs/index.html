@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pompon · thermopompe.guide</title>
+<link rel="icon" href="pompon.svg" type="image/svg+xml">
+<style>
+  :root { --bg:#fff; --text:#1f1d2b; --muted:#57606a; --brand:#7c3aed; --soft:#ede9fe; --line:#d8d4e6; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14121c; --text:#f2f0f8; --muted:#b4aec6; --brand:#a78bfa; --soft:#2a2140; --line:#3a3450; } }
+  * { box-sizing:border-box; } body { margin:0; background:var(--bg); color:var(--text); font:18px/1.6 system-ui, sans-serif; }
+  main { max-width:780px; margin:0 auto; padding:24px 16px 48px; }
+  header { display:flex; gap:16px; align-items:center; } header img { width:96px; height:96px; flex:none; }
+  h1 { margin:0; font-size:2rem; line-height:1.1; } h2 { margin:32px 0 8px; }
+  .sub { color:var(--muted); margin:4px 0 0; }
+  form { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:24px; }
+  label { display:flex; flex-direction:column; gap:4px; font-weight:600; } label span { font-weight:400; color:var(--muted); font-size:.85rem; }
+  input, select { min-height:44px; font:inherit; padding:6px 10px; border:2px solid var(--text); border-radius:0; background:var(--bg); color:var(--text); }
+  .bubble { background:var(--brand); color:#fff; padding:14px 18px; font-weight:600; margin-top:24px; }
+  table { width:100%; border-collapse:collapse; margin-top:12px; } th, td { border-bottom:1px solid var(--line); padding:8px; text-align:left; }
+  td.n { text-align:right; font-variant-numeric:tabular-nums; } tr.best td { background:var(--soft); font-weight:700; }
+  .action { display:inline-block; margin-top:16px; background:var(--brand); color:#fff; padding:12px 18px; text-decoration:none; font-weight:700; }
+  .note { border:2px solid var(--text); padding:12px 16px; margin-top:24px; font-size:.9rem; }
+  a { color:var(--brand); } footer { margin-top:32px; color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="pompon.svg" alt="Pompon, une thermopompe qui porte une tuque">
+    <div>
+      <h1>Pompon</h1>
+      <p class="sub">Avant de signer une soumission de thermopompe : combien LogisVert vous verse, et quoi exiger de l’installateur. · Before you sign a heat pump quote.</p>
+    </div>
+  </header>
+
+  <form id="f">
+    <label>Capacité de chauffage à −8 °C (BTU/h) <span>Inscrite sur la soumission ; 12 000 BTU/h = 1 tonne</span>
+      <input id="btuh" type="number" min="0" max="200000" step="1000" value="24000"></label>
+    <label>Type de bâtiment <span>Building</span>
+      <select id="building"><option value="house">Maison / House</option><option value="multi">Multilogement (zone admissible) / Multi-unit</option></select></label>
+  </form>
+
+  <p class="bubble" id="pompon" aria-live="polite"></p>
+
+  <h2>LogisVert selon le type d’appareil</h2>
+  <table><thead><tr><th>Appareil à demander</th><th>Taux</th><th class="n">Subvention</th></tr></thead><tbody id="rows"></tbody></table>
+
+  <a class="action" id="mail" href="#">Envoyer ces exigences à 3 installateurs</a>
+
+  <p class="note">Montants du programme LogisVert d’Hydro-Québec, page lue le 2026-11-12 : <a href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/residentiel.html">source</a>. Le montant est fixé à la date d’installation. Une fois le modèle connu, l’<a href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/recherche-themopompes-efficaces.html">outil d’Hydro-Québec</a> confirme le montant exact par numéro AHRI.</p>
+  <footer>Code et données : <a href="https://github.com/SeCuReDmE-main-dev/gap-workbench">gap-workbench</a> (Apache-2.0) · <a href="evidence.md">preuves</a></footer>
+</main>
+<script>
+let rules = null;
+function subsidy(m, btuh) { const a = Math.round(m.per_1000_btuh * btuh / 1000); return m.cap ? Math.min(a, m.cap) : a; }
+const fmt = n => n.toLocaleString("fr-CA") + " $";
+function render() {
+  const btuh = Math.max(0, Math.min(200000, parseInt(document.getElementById("btuh").value || "0", 10)));
+  const multi = document.getElementById("building").value === "multi";
+  const ms = rules.measures.filter(m => multi || m.id !== "cold-climate-multiunit");
+  const rows = ms.map(m => [m, subsidy(m, btuh)]).sort((a, b) => b[1] - a[1]);
+  const tb = document.getElementById("rows"); tb.textContent = "";
+  rows.forEach(([m, s], i) => {
+    const tr = tb.insertRow(); if (i === 0) tr.className = "best";
+    tr.insertCell().textContent = m.label;
+    tr.insertCell().textContent = m.per_1000_btuh + " $ / 1 000 BTU/h" + (m.cap ? " (max " + fmt(m.cap) + ")" : "");
+    const c = tr.insertCell(); c.className = "n"; c.textContent = fmt(s);
+  });
+  const es = subsidy(ms.find(m => m.id === "energy-star"), btuh), cc = subsidy(ms.find(m => m.id === "cold-climate"), btuh);
+  document.getElementById("pompon").textContent = "Pour " + btuh.toLocaleString("fr-CA") + " BTU/h, exigez « ENERGY STAR Climat froid » sur la soumission : " + fmt(cc) + " au lieu de " + fmt(es) + ", soit " + fmt(cc - es) + " de plus.";
+  const body = "Bonjour,\n\nJe demande une soumission pour une thermopompe de " + btuh + " BTU/h à -8 °C.\nExigences :\n1. Modèle certifié ENERGY STAR Climat froid (LogisVert : " + fmt(cc) + ").\n2. Numéro de modèle et numéro AHRI écrits sur la soumission.\n3. Capacité à -8 °C écrite sur la soumission.\n4. Date d’installation prévue.\n\nMerci.";
+  document.getElementById("mail").href = "mailto:?subject=" + encodeURIComponent("Soumission thermopompe, exigences LogisVert") + "&body=" + encodeURIComponent(body);
+}
+fetch("logisvert.json").then(r => r.json()).then(d => { rules = d; render(); });
+document.getElementById("f").addEventListener("input", render);
+</script>
+</body>
+</html>
