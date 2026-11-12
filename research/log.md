@@ -15,3 +15,4 @@ Everything in this repository was made inside one 45-minute We The Flywheel *Fin
 | 07:47 | Redrew Pompon and logo; added rule watcher (first live run found a 140 $ rate held for review) and benchmarks (12/12, 1,005/1,005, linter 10/10 with 0/10 false alarms) | 11 tests |
 | 07:52 | Documentation: bilingual README with badges, HUMAN.md, AGENTS.md, SECURITY.md, CONTRIBUTING.md, CITATION.cff, NOTICE, CHANGELOG; weekly rule watcher in Actions; benchmarks in CI | 11 tests |
 | 07:52 | Wide banner infographic at the top of the README | docs/banner.svg |
+| 07:53 | Code of conduct, issue and PR templates, .claude/settings.json, private vulnerability reporting, topics | |

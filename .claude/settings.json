@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m unittest discover -s tests)",
+      "Bash(python benchmarks/run.py)",
+      "Bash(python -m workbench.watch:*)",
+      "Bash(python -m workbench.lint:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./entry/**)",
+      "Bash(git push:*)"
+    ]
+  }
+}

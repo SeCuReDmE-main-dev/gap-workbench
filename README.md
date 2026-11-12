@@ -92,7 +92,7 @@ Information, pas un conseil. Le montant exact est confirmé par Hydro-Québec à
 
 ## Project files
 
-[HUMAN.md](HUMAN.md) (for the person in charge) · [AGENTS.md](AGENTS.md) (for AI agents) · [CONTRIBUTING.md](CONTRIBUTING.md) · [SECURITY.md](SECURITY.md) · [CHANGELOG.md](CHANGELOG.md) · [CITATION.cff](CITATION.cff) · [NOTICE](NOTICE)
+[HUMAN.md](HUMAN.md) (for the person in charge) · [AGENTS.md](AGENTS.md) (for AI agents) · [CONTRIBUTING.md](CONTRIBUTING.md) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md) · [CHANGELOG.md](CHANGELOG.md) · [CITATION.cff](CITATION.cff) · [NOTICE](NOTICE)
 
 ## License
 
