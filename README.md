@@ -1,5 +1,7 @@
 <p align="center"><img src="docs/banner.svg" width="100%" alt="Pompon: for the same 24,000 BTU/h, LogisVert pays 1,200 $ for an ENERGY STAR heat pump and 2,880 $ for a Cold Climate unit. Engine 12/12, page 1,005/1,005, linter 10/10, weekly rule watcher."></p>
 
+<p align="center"><a href="https://wetheflywheel.com/en/hackathon/"><img src="https://wetheflywheel.com/apply/assets/wtf-hackathon-og.png" width="420" alt="We The Flywheel – Find the Gap, a 45-minute hackathon"></a><br><sub>Built for the We The Flywheel <i>Find the Gap</i> hackathon. The WTF image is linked from wetheflywheel.com and belongs to We The Flywheel, which does not endorse this repository.</sub></p>
+
 # gap-workbench · Pompon
 
 [![CI](https://github.com/SeCuReDmE-main-dev/gap-workbench/actions/workflows/ci.yml/badge.svg)](https://github.com/SeCuReDmE-main-dev/gap-workbench/actions/workflows/ci.yml)

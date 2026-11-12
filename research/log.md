@@ -16,3 +16,4 @@ Everything in this repository was made inside one 45-minute We The Flywheel *Fin
 | 07:52 | Documentation: bilingual README with badges, HUMAN.md, AGENTS.md, SECURITY.md, CONTRIBUTING.md, CITATION.cff, NOTICE, CHANGELOG; weekly rule watcher in Actions; benchmarks in CI | 11 tests |
 | 07:52 | Wide banner infographic at the top of the README | docs/banner.svg |
 | 07:53 | Code of conduct, issue and PR templates, .claude/settings.json, private vulnerability reporting, topics | |
+| 07:54 | WTF hackathon banner linked from wetheflywheel.com at the top of the README | |
