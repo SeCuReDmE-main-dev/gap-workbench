@@ -1,0 +1,6 @@
+benchmark,result
+engine_vs_published_rates,12/12 exact
+page_vs_engine_parity,1005/1005 identical
+linter_recall_on_negations,10/10
+linter_false_alarms_on_clean_text,0/10
+engine_calls_per_second,"981,815"

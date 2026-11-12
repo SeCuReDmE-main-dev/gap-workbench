@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Pompon logo">
+  <title>Pompon</title>
+  <rect width="64" height="64" fill="#7c3aed"/>
+  <rect x="12" y="26" width="40" height="30" rx="10" fill="#ede9fe"/>
+  <circle cx="32" cy="45" r="6.5" fill="#fff" stroke="#c4b5fd" stroke-width="2"/>
+  <circle cx="25" cy="34" r="2.6" fill="#1f1d2b"/><circle cx="39" cy="34" r="2.6" fill="#1f1d2b"/>
+  <path d="M15 28 Q17 10 32 9 Q47 10 49 28 Z" fill="#a78bfa"/>
+  <rect x="13" y="24" width="38" height="6" rx="3" fill="#fbbf24"/>
+  <circle cx="32" cy="8" r="5" fill="#fcd34d"/>
+</svg>

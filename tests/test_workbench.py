@@ -64,3 +64,19 @@ class Lint(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Watch(unittest.TestCase):
+    def test_reads_rates_written_with_html_entities(self):
+        from workbench.watch import check
+        page = ("<p>50&nbsp;$ par 1000&nbsp;BTU/h</p><p>120&nbsp;$ par 1000 BTU/h</p><p>220&nbsp;$ par 1&nbsp;000&nbsp;BTU/h</p>"
+                "<p>250 $ par 1 000 BTU/h</p><p>750 $ par 1 000 BTU/h</p><p>100 $ par 1 000 BTU/h</p>")
+        r = check(page)
+        self.assertEqual(r["missing_on_page"], [])
+        self.assertEqual(r["new_on_page"], [])
+
+    def test_reports_a_changed_rate(self):
+        from workbench.watch import check
+        r = check("<p>60 $ par 1000 BTU/h</p>")
+        self.assertIn(50, r["missing_on_page"])
+        self.assertIn(60, r["new_on_page"])

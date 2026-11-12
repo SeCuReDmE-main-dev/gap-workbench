@@ -54,4 +54,8 @@ Funnel per 1,000 checker users (assumptions marked):
 
 ## Operator workbench
 
-`workbench/lint.py` checks the entry before submission: word limits, negations, and every number against `data/` and this sheet. It caught one unsourced figure in this entry. `research/log.md` records each step with its time. The 7 tests also run in an E2B microVM (template `code-interpreter-v1`, the fastest of 12 images in a startup benchmark): 7/7 pass in 2.0 s including the clone.
+`workbench/lint.py` checks the entry before submission: word limits, negations, and every number against `data/` and this sheet. It caught one unsourced figure in this entry.
+
+`workbench/watch.py` re-reads the official page and compares every rate with `data/logisvert.json`. On its first live run (2026-11-12) it found all 5 rates in use, plus a 140 $ rate for very-high-efficiency units with caulking work that Protégez-vous reported ended in August 2025; that rate is held for human review and left out of the checker.
+
+Benchmarks (`benchmarks/run.py`, results in `data/benchmark.csv`): engine vs published rates 12/12 exact; page vs engine 1,005/1,005 identical; linter catches 10/10 negations with 0/10 false alarms. `research/log.md` records each step with its time. The 7 tests also run in an E2B microVM (template `code-interpreter-v1`, the fastest of 12 images in a startup benchmark): 7/7 pass in 2.0 s including the clone.
