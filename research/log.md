@@ -13,3 +13,4 @@ Everything in this repository was made inside one 45-minute We The Flywheel *Fin
 | 07:39 | Live check: page loaded but docs/logisvert.json was missing (404); copied it and added 2 tests (same rules, fetched file exists) | 9 tests |
 | 07:43 | Hostile review of the draft: money switched to exclusive leads at 50 $ per lead with unit economics per 1,000 users; gap sentence tied to certification | linter 0 issues, 9 tests |
 | 07:47 | Redrew Pompon and logo; added rule watcher (first live run found a 140 $ rate held for review) and benchmarks (12/12, 1,005/1,005, linter 10/10 with 0/10 false alarms) | 11 tests |
+| 07:52 | Documentation: bilingual README with badges, HUMAN.md, AGENTS.md, SECURITY.md, CONTRIBUTING.md, CITATION.cff, NOTICE, CHANGELOG; weekly rule watcher in Actions; benchmarks in CI | 11 tests |
