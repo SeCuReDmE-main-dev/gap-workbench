@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/pompon.svg" width="110" alt="Pompon, a heat pump wearing a tuque"></p>
+<p align="center"><img src="docs/banner.svg" width="100%" alt="Pompon: for the same 24,000 BTU/h, LogisVert pays 1,200 $ for an ENERGY STAR heat pump and 2,880 $ for a Cold Climate unit. Engine 12/12, page 1,005/1,005, linter 10/10, weekly rule watcher."></p>
 
 # gap-workbench · Pompon
 

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="Pompon: for the same 24,000 BTU/h, LogisVert pays 1,200 dollars for an ENERGY STAR heat pump and 2,880 dollars for a Cold Climate unit. Engine 12 of 12, page 1,005 of 1,005, weekly rule watcher.">
+  <title>Pompon · LogisVert subsidy before you sign</title>
+  <defs>
+    <style>
+      .h { font: 800 30px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #fff; }
+      .s { font: 500 16px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #ede9fe; }
+      .l { font: 600 15px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #fff; }
+      .v { font: 800 22px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1f1d2b; }
+      .k { font: 800 26px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #fbbf24; }
+      .t { font: 500 13px system-ui, -apple-system, "Segoe UI", sans-serif; fill: #ede9fe; }
+    </style>
+  </defs>
+  <rect width="1200" height="240" fill="#7c3aed"/>
+  <rect y="228" width="1200" height="12" fill="#fbbf24"/>
+
+  <!-- Pompon -->
+  <g transform="translate(28 30) scale(1.45)">
+    <rect x="20" y="46" width="80" height="62" rx="20" fill="#ede9fe" stroke="#1f1d2b" stroke-width="3"/>
+    <circle cx="60" cy="88" r="14" fill="#fff" stroke="#c4b5fd" stroke-width="3"/>
+    <circle cx="46" cy="64" r="6" fill="#fff"/><circle cx="74" cy="64" r="6" fill="#fff"/>
+    <circle cx="47" cy="65" r="3.6" fill="#1f1d2b"/><circle cx="73" cy="65" r="3.6" fill="#1f1d2b"/>
+    <ellipse cx="38" cy="72" rx="4.5" ry="2.6" fill="#f9a8d4"/><ellipse cx="82" cy="72" rx="4.5" ry="2.6" fill="#f9a8d4"/>
+    <path d="M54 71 Q60 76 66 71" fill="none" stroke="#1f1d2b" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M26 48 Q30 14 60 12 Q90 14 94 48 Z" fill="#1f1d2b"/>
+    <rect x="22" y="42" width="76" height="10" rx="5" fill="#fbbf24"/>
+    <circle cx="60" cy="10" r="8" fill="#fcd34d"/>
+  </g>
+
+  <!-- Title -->
+  <text x="220" y="62" class="h">Pompon</text>
+  <text x="220" y="88" class="s">Know your LogisVert subsidy before you sign a heat pump quote</text>
+  <text x="220" y="108" class="s">Connaissez votre subvention avant de signer</text>
+
+  <!-- Bars: same 24,000 BTU/h -->
+  <text x="220" y="146" class="l">Same 24,000 BTU/h at −8 °C</text>
+  <text x="220" y="176" class="l">ENERGY STAR</text>
+  <rect x="340" y="160" width="125" height="24" fill="#ede9fe"/>
+  <text x="474" y="179" class="v" style="fill:#fff">1,200 $</text>
+  <text x="220" y="210" class="l">Cold Climate</text>
+  <rect x="340" y="194" width="300" height="24" fill="#fbbf24"/>
+  <text x="649" y="213" class="v" style="fill:#fff">2,880 $</text>
+
+  <!-- Divider -->
+  <rect x="760" y="30" width="3" height="180" fill="#a78bfa"/>
+
+  <!-- Proof stats -->
+  <text x="790" y="62" class="k">12/12</text>
+  <text x="900" y="62" class="t">engine vs published rates</text>
+  <text x="790" y="108" class="k">1,005/1,005</text>
+  <text x="960" y="108" class="t">page = engine</text>
+  <text x="790" y="154" class="k">10/10</text>
+  <text x="900" y="154" class="t">linter catches negations, 0 false alarms</text>
+  <text x="790" y="200" class="k">weekly</text>
+  <text x="900" y="200" class="t">watcher re-reads Hydro-Québec</text>
+</svg>
