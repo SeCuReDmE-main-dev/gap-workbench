@@ -1,0 +1,17 @@
+# Pompon (repository: gap-workbench)
+
+> Shows Quebec homeowners, before any quote, what Hydro-Québec's LogisVert program pays for each type of heat pump at their capacity, and writes the email that asks installers for the unit that pays the most. Information, not advice.
+
+## Read first
+
+- [Pompon, example at 24,000 BTU/h](https://securedme-main-dev.github.io/gap-workbench/?btuh=24000): 1,200 $ (ENERGY STAR) vs 2,880 $ (Cold Climate)
+- [Evidence sheet](https://securedme-main-dev.github.io/gap-workbench/evidence.md): demand, gap, product, money, operator workbench, each with a source
+
+## Data
+
+- [data/logisvert.json](https://raw.githubusercontent.com/SeCuReDmE-main-dev/gap-workbench/main/data/logisvert.json): rates, caps and official sources
+- [data/benchmark.csv](https://raw.githubusercontent.com/SeCuReDmE-main-dev/gap-workbench/main/data/benchmark.csv): benchmark results
+
+## Code
+
+- [Repository](https://github.com/SeCuReDmE-main-dev/gap-workbench): rules engine, entry linter, rule watcher, tests, Apache-2.0

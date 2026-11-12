@@ -67,6 +67,16 @@ Standard library only. Python 3.10 or later. `node` is optional (page/engine par
 
 `data/logisvert.json` is the single source of truth: each measure has a rate, a cap and the official source. `known_other_rates` lists rates seen on the page that the checker does not apply, each with the reason. `docs/logisvert.json` is the copy the page reads; a test keeps both identical.
 
+### One workbench, every Flywheel business
+
+| Flywheel business | What the workbench does for it |
+|---|---|
+| Media (owned properties) | Pompon is an owned property with a buyer-intent audience; the watcher and the linter keep it accurate |
+| Sports (independent journalism) | `watch.py` re-reads official sources; `lint.py` checks every number before publishing |
+| Studio (prototype to production) | This repository: empty at minute 1, then tests, CI, benchmarks and an E2B sandbox run within 45 minutes |
+| Advisory (AI due diligence) | `docs/evidence.md` and `research/log.md`: every claim tied to a source, every step timed |
+| Motion (discoverability) | Shareable result links (`?btuh=`) and [docs/llms.txt](docs/llms.txt), a page summary written for AI assistants |
+
 ### How it was built
 
 Every step has a time in [research/log.md](research/log.md), from the empty repository at minute 1. The entry text itself stays out of this repository: its rights belong to We The Flywheel.
