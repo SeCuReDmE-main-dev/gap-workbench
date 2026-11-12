@@ -10,3 +10,4 @@ Everything in this repository was made inside one 45-minute We The Flywheel *Fin
 | 07:35 | Ran the 7 tests in an E2B microVM (template code-interpreter-v1, chosen by an earlier startup benchmark) | 7/7 pass, 2.0 s including clone |
 | 07:35 | Searched market size and rule changes | free heat pumps for 20,000 modest-income households (La Presse, 2026-06-29); rules changed 2025-11-26 |
 | 07:37 | Drafted the entry fields locally (kept out of the repo); linter caught 1 number missing from the evidence sheet, fixed | 0 issues |
+| 07:39 | Live check: page loaded but docs/logisvert.json was missing (404); copied it and added 2 tests (same rules, fetched file exists) | 9 tests |

@@ -1,3 +1,5 @@
+import json
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -33,6 +35,20 @@ class Subsidy(unittest.TestCase):
         self.assertTrue(rules["source"].startswith("https://"))
         for m in rules["measures"]:
             self.assertGreater(m["per_1000_btuh"], 0)
+
+
+class PublishedPage(unittest.TestCase):
+    ROOT = Path(__file__).resolve().parents[1]
+
+    def test_page_reads_the_same_rules_as_the_engine(self):
+        a = (self.ROOT / "data" / "logisvert.json").read_text(encoding="utf-8")
+        b = (self.ROOT / "docs" / "logisvert.json").read_text(encoding="utf-8")
+        self.assertEqual(json.loads(a), json.loads(b))
+
+    def test_page_fetches_a_file_that_exists(self):
+        html = (self.ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+        for name in re.findall(r'fetch\("([^"]+)"\)', html):
+            self.assertTrue((self.ROOT / "docs" / name).exists(), name)
 
 
 class Lint(unittest.TestCase):

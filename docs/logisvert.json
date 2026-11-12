@@ -1,0 +1,21 @@
+{
+  "program": "LogisVert (Hydro-Québec), residential",
+  "checked": "2026-11-12",
+  "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/residentiel.html",
+  "note": "Amounts are per 1,000 BTU/h of heating capacity at -8 °C. The amount is set by the installation date.",
+  "measures": [
+    {"id": "energy-star", "label": "Heat pump, ENERGY STAR certified", "per_1000_btuh": 50, "cap": null},
+    {"id": "cold-climate", "label": "Heat pump, ENERGY STAR Cold Climate", "per_1000_btuh": 120, "cap": null},
+    {"id": "cold-climate-multiunit", "label": "Cold-climate wall units, multi-unit building bonus", "per_1000_btuh": 220, "cap": null},
+    {"id": "geothermal", "label": "Geothermal heat pump", "per_1000_btuh": 750, "cap": 18000},
+    {"id": "geothermal-replacement", "label": "Geothermal heat pump replacement", "per_1000_btuh": 250, "cap": 18000}
+  ],
+  "federal_2027": {
+    "fact": "On 8 October 2026 the federal government announced heat pump subsidies starting in 2027; LogisVert stays in force.",
+    "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/"
+  },
+  "official_tool": {
+    "fact": "Hydro-Québec estimates the subsidy from a model or AHRI number, which a homeowner has only once a quote names the unit.",
+    "source": "https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/recherche-themopompes-efficaces.html"
+  }
+}
