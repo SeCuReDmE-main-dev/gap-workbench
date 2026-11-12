@@ -48,6 +48,8 @@
 
   <a class="action" id="mail" href="#">Envoyer ces exigences à 3 installateurs</a>
 
+  <p class="note"><strong>Ménage à revenu modeste ?</strong> Hydro-Québec, Québec et Ottawa offrent une thermopompe sans frais à 20 000 ménages : <a href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/menages-revenu-modeste/">critères</a> (<a href="https://www.lapresse.ca/affaires/economie/2026-06-29/quebec/des-thermopompes-gratuites-pour-20-000-menages-a-revenus-modestes.php">La Presse, 29 juin 2026</a>). Le bonus multilogement de 220 $ vise les immeubles de 1995 ou avant, en zone admissible.</p>
+
   <p class="note">Montants du programme LogisVert d’Hydro-Québec, page lue le 2026-11-12 : <a href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/residentiel.html">source</a>. Le montant est fixé à la date d’installation. Une fois le modèle connu, l’<a href="https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/recherche-themopompes-efficaces.html">outil d’Hydro-Québec</a> confirme le montant exact par numéro AHRI.</p>
   <footer>Code et données : <a href="https://github.com/SeCuReDmE-main-dev/gap-workbench">gap-workbench</a> (Apache-2.0) · <a href="evidence.md">preuves</a></footer>
 </main>
@@ -72,6 +74,11 @@ function render() {
   const body = "Bonjour,\n\nJe demande une soumission pour une thermopompe de " + btuh + " BTU/h à -8 °C.\nExigences :\n1. Modèle certifié ENERGY STAR Climat froid (LogisVert : " + fmt(cc) + ").\n2. Numéro de modèle et numéro AHRI écrits sur la soumission.\n3. Capacité à -8 °C écrite sur la soumission.\n4. Date d’installation prévue.\n\nMerci.";
   document.getElementById("mail").href = "mailto:?subject=" + encodeURIComponent("Soumission thermopompe, exigences LogisVert") + "&body=" + encodeURIComponent(body);
 }
+(function () {
+  const q = new URLSearchParams(location.search);
+  if (/^\d{1,6}$/.test(q.get("btuh") || "")) document.getElementById("btuh").value = q.get("btuh");
+  if (q.get("building") === "multi") document.getElementById("building").value = "multi";
+})();
 fetch("logisvert.json").then(r => r.json()).then(d => { rules = d; render(); });
 document.getElementById("f").addEventListener("input", render);
 </script>

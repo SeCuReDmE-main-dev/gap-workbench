@@ -8,7 +8,7 @@ Built inside one 45-minute We The Flywheel *Find the Gap* window (concept submit
 
 ```bash
 python -m unittest discover -s tests
-python -m workbench.lint entry/fields.md
+python -m workbench.lint entry/fields.md   # the entry text stays local (rights assigned to WTF); entry/ is git-ignored
 ```
 
 Information, not advice. Licence: Apache-2.0.

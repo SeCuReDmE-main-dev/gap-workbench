@@ -9,6 +9,10 @@ Every figure below comes from a public page read on 2026-11-12, inside the timed
 | A Quebec homeowner reading about LogisVert is "still a bit confused about how it works and what kind of rebate I could expect" | https://www.reddit.com/r/QuebecFinance/comments/1nixyd0/heat_pump_installationmural_system/ |
 | Installers "rushing me to sign the contract" before a rumoured LogisVert end date | https://www.reddit.com/r/Quebec/comments/1mndbwg/la_subvention_logisvert_%C3%A7a_fini_tu_vraiment_le_25/ |
 | Advice repeated to Canadians: check subsidies before buying a heat pump | https://www.reddit.com/r/heatpumps/comments/1umo4la/looking_to_swap_my_aging_ac_with_a_heat_pump/ |
+| Free heat pumps for 20,000 modest-income households (Ottawa, Québec, Hydro-Québec) | https://www.lapresse.ca/affaires/economie/2026-06-29/quebec/des-thermopompes-gratuites-pour-20-000-menages-a-revenus-modestes.php |
+| A LogisVert bonus worth up to 7,840 $ ended in August 2025 | https://www.protegez-vous.ca/nouvelles/habitation/fin-d-une-des-subventions-du-programme-logisvert |
+| LogisVert requirements changed on 26 November 2025 | https://www.novairplus.com/post/changes-to-logisvert-program-heat-pumps-quebec-2025 |
+| Installer guide: "Vous n'avez pas besoin de comprendre les calculs" | https://www.climatexpress.ca/subvention-gouvernementale-electricite.html |
 | On 8 October 2026 the federal government announced heat pump subsidies from 2027; LogisVert stays in force | https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/ |
 
 ## The gap
@@ -22,6 +26,8 @@ Hydro-Québec's own estimator works from a model or AHRI number: https://www.hyd
 | Cold climate, multi-unit bonus | 220 $ | 5,280 $ |
 | Geothermal | 750 $ (cap 18,000 $) | 18,000 $ |
 
+The 220 $ multi-unit bonus applies to buildings from 1995 or earlier in an eligible zone: https://www.kgconfort.com/subvention-maisons-vertes.php
+
 Source: https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financieres/logisvert/residentiel.html . Computed by `workbench/subsidy.py`, tested in `tests/test_workbench.py`.
 
 ## The product
@@ -34,6 +40,19 @@ Source: https://www.hydroquebec.com/residentiel/mieux-consommer/aides-financiere
 
 Contractors already pay for qualified leads. Google Local Services Ads: 57 $ per lead and a 43.9 % booking rate (SearchLight Digital benchmark, February 2026, 888 contractors): https://pipelineon.com/blog/best-lead-generation-platforms-plumbing-contractors-2026/ . Thumbtack: 15 $ to 75 $ per lead: https://fieldcamp.ai/hvac-software/lead-generation/ .
 
+Funnel, season 1 (one stated assumption, the send rate):
+
+| Step | Value | Basis |
+|---|---|---|
+| Checker users | 20,000 | target, same size as the free program |
+| Send a quote request | 10 % → 2,000 | assumption measured in season 1 |
+| Installers per request | 3 | product design |
+| Price per request | 40 $ | below Google's 57 $ |
+| Revenue | 240,000 $ | 2,000 × 3 × 40 $ |
+| At a 5 % send rate | 120,000 $ | sensitivity |
+| Jobs booked by installers | 43.9 % of requests | SearchLight benchmark |
+
+
 ## Operator workbench
 
-`workbench/lint.py` checks the entry before submission: word limits, negations, and every number against `data/` and this sheet. `research/log.md` records each step with its time.
+`workbench/lint.py` checks the entry before submission: word limits, negations, and every number against `data/` and this sheet. `research/log.md` records each step with its time. The 7 tests also run in an E2B microVM (template `code-interpreter-v1`, the fastest of 12 images in a startup benchmark): 7/7 pass in 2.0 s including the clone.
